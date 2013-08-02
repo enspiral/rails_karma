@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = RailsKarma::VERSION
   spec.authors       = ["Joshua Vial"]
   spec.email         = ["joshua@enspiral.com"]
-  spec.description   = %q{Integrate karma for javascript testing with rails}
-  spec.summary       = %q{Integrate rkarma for javascript testing with rails}
-  spec.homepage      = ""
+  spec.summary       = %q{Integrate Karma javascript test runner with rails}
+  spec.description   = %q{A simple gem which installs Karma config files and rake tasks}
+  spec.homepage      = "https://github.com/enspiral/rails_karma"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)

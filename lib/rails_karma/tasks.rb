@@ -13,16 +13,16 @@ namespace :karma do
       sh 'mkdir karma/lib'
       sh 'mkdir karma/lib/angular'
 
-      mocks_source = File.join(Gem.loaded_specs["rails_karma"].full_gem_path, 'lib', 'rails_karma', 'files', 'angular-mocks.js')
+      mocks_source = File.join(Gem.loaded_specs["rails_karma"].full_gem_path, 'files', 'angular-mocks.js')
       mocks_target = File.join(Rails.root, 'karma', 'lib', 'angular', 'angular-mocks.js')
       FileUtils.cp_r mocks_source, mocks_target
     end
 
-    config_source = File.join(Gem.loaded_specs["rails_karma"].full_gem_path, 'lib', 'rails_karma', 'files', 'karma.conf.js')
+    config_source = File.join(Gem.loaded_specs["rails_karma"].full_gem_path, 'files', 'karma.conf.js')
     config_target = File.join(Rails.root, 'config', 'karma.conf.js')
     FileUtils.cp_r config_source, config_target unless File.exists?(config_target)
   end
 end
 
-desc 'Alias for kamra:run'
+desc 'Alias for karma:run'
 task :karma => "karma:run"
