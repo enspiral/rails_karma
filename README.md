@@ -1,24 +1,47 @@
 # RailsKarma
 
-TODO: Write a gem description
+This is a simple gem which integrates [Karma](http://karma-runner.github.io/) with Rails
 
 ## Installation
+
+You will need npm to install karma so if you don't have node you can [get it here](http://nodejs.org/download/)
 
 Add this line to your application's Gemfile:
 
     gem 'rails_karma'
 
-And then execute:
+Then execute:
 
     $ bundle
+    $ rake karma:install
 
-Or install it yourself as:
+This will install a sample config file in config/karma.conf.js and install karma via npm
 
-    $ gem install rails_karma
+If you are using travis you will need `npm install` in your before_script to install karma e.g.
+
+    #sample .travis.yml file
+    language: ruby
+    env:
+      - DB=postgres
+    rvm:
+      - 2.0.0
+    bundler_args: --without development
+    before_script:
+      - cp config/database.yml.travis config/database.yml
+      - bundle exec rake db:setup
+      - npm install
+
+and then you can use karma in your rake task e.g.
+
+    #lib/tasks/ci.rake
+    desc "Run all the tests, called by the CI server"
+    task :ci => [:spec, :cucumber, :karma] do
+
+    end
 
 ## Usage
 
-TODO: Write usage instructions here
+Update config/karma.conf.js to load the files you want to test and run `rake karma` to run your tests
 
 ## Contributing
 
