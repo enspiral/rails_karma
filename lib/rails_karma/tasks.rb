@@ -24,7 +24,6 @@ namespace :karma do
         FileUtils.rm_rf f
       end
     end
-    puts 'Done'
   end
 end
 
