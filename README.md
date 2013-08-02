@@ -2,6 +2,8 @@
 
 This is a simple gem which integrates [Karma](http://karma-runner.github.io/) with Rails
 
+[![Code Climate](https://codeclimate.com/github/enspiral/rails_karma.png)](https://codeclimate.com/github/enspiral/rails_karma)
+
 ## Installation
 
 You will need npm to install karma so if you don't have node you can [get it here](http://nodejs.org/download/)
