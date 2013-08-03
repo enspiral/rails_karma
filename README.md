@@ -56,5 +56,8 @@ Update config/karma.conf.js to load the files you want to test and run `rake kar
 
 ## Changelog
 
+### 0.1.2
+- fixing error with shell command installing karma
+
 ### 0.1.1
 - initial release

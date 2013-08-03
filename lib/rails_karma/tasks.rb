@@ -39,7 +39,7 @@ module RailsKarma
       end
       unless File.open('package.json') {|f| f.read.include? 'karma'}
         puts 'installing karma'
-        sh 'npm install karma --save-dev'
+        puts `npm install karma --save-dev`
       end
       unless File.open('.gitignore') {|f| f.read.include? 'node_modules'}
         puts 'adding node_modules to .gitignore'
