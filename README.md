@@ -56,6 +56,10 @@ Update config/karma.conf.js to load the files you want to test and run `rake kar
 
 ## Changelog
 
+### 0.1.3
+- adding [angularjs-rails-resource](https://github.com/FineLinePrototyping/angularjs-rails-resource)
+- adding test spec so rake karma works straight after install
+
 ### 0.1.2
 - fixing error with shell command installing karma
 

@@ -4,13 +4,12 @@ files = [
   JASMINE,
   JASMINE_ADAPTER,
 
-  //libs
+  //angular
   'vendor/assets/javascripts/rails_karma/angular.js',
-  'vendor/assets/javascripts/rails_karma/angular-cookies.js',
-  'vendor/assets/javascripts/rails_karma/angular-loader.js',
-  'vendor/assets/javascripts/rails_karma/angular-resource.js',
-  'vendor/assets/javascripts/rails_karma/angular-sanitize.js',
-  'vendor/assets/javascripts/rails_karma/angular-mocks.js',
+  'vendor/assets/javascripts/rails_karma/*.js',
+
+   //angular rails resource
+  'vendor/assets/javascripts/rails_karma/angularjs-rails-resource/**',
 
   //our app!
   'app/assets/angular/**',
